@@ -5,8 +5,11 @@ public class Pion extends Piece{
     }
 
 
-    public boolean deplacement (Case destination) {
-        if (destination )
+    public boolean deplacement(Case destination){
+    	
+        if(this.getPositionX+i==x && this.y+i==y)
+    		return true;
+        }
     }
 
     public int avanceDeDeux (int deplacementX) {
