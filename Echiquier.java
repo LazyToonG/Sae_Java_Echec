@@ -43,9 +43,9 @@ public class Echiquier {
         return nomCase;
     }
 
-    public int traduitCaseColonne(){
+    public int traduitCaseColonne(String scan){
         int indexColonneInt;
-        char indexColonneChar = demandeCase().charAt(0);
+        char indexColonneChar = scan.charAt(0);
         if (indexColonneChar == 'a' || indexColonneChar == 'A'){
             indexColonneInt = 0;}
         if (indexColonneChar == 'b' || indexColonneChar == 'B'){
@@ -67,9 +67,9 @@ public class Echiquier {
     }
         
 
-    public int traduitCaseLigne(){
+    public int traduitCaseLigne(String scan){
         int indexLigneInt;
-        char indexLigneChar = demandeCase().charAt(1);
+        char indexLigneChar = scan.charAt(1);
         if (indexLigneChar == '8'){
             indexLigneInt = 0;}
         if (indexLigneChar == '7'){
@@ -90,7 +90,20 @@ public class Echiquier {
         return indexLigneInt;
     }
 
-    public void bougerPion(){
+
+    public void bougerPiece(Case[][] echiquier){
+        String scan1 = demandeCase();
+        String scan2 = demandeCase();
+        Case positionDefault = echiquier[traduitCaseLigne(scan1)][traduitCaseColonne(scan1)];
+        Case positionVoulue = echiquier[traduitCaseLigne(scan2)][traduitCaseColonne(scan2)];
+        if (traduitCaseColonne(scan1) == -1 || traduitCaseLigne(scan1) == -1 || traduitCaseColonne(scan2) == -1 || traduitCaseLigne(scan2) == -1){
+            System.out.println("La ligne ou la colonne choisie est invalide, veuillez réessayer");
+        } 
+        else{
+            positionVoulue.setPiece(positionDefault.getPiece());
+            positionDefault.deletePiece();
+            
+        }
         
     }
 

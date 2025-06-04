@@ -13,31 +13,13 @@ public class Case {
     }
 
     //Methodes
+
+    public void afficherCaseActuelle(){
+        System.out.println(this.getPiece());
+    }
     
-
-
-
-
-
-
-
-    public boolean caseActuelle(Piece p) {
-        if (p == null){
-            this.contientPiece = false;
-        } else {
-            this.contentpiece = true;
-        }
-    }
-
-    public void caseChoisie (int positionX, int positionY) {
-        if (dansEchiquier()){
-            this.positionX = positionX;
-            this.positionY = positionY;
-        }
-    }
-
-    public boolean dansEchiquier() {
-        return positionX<9 && positionY<9; 
+    public void deletePiece(){
+        this.piece = null;
     }
 
     //Setter
@@ -65,18 +47,4 @@ public class Case {
     public Piece getPiece () {
         return piece;
     }
-
-
-
-
-
-
-
-
-
-
-    public boolean contientPiece(){
-        return contientPiece;
-    }
-
 }
