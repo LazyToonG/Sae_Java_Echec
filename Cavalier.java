@@ -2,9 +2,8 @@ public class Cavalier extends Piece{
 	private int x;
 	private int y;
 	
-	public Cavalier(int x,int y) {
-		this.x=x;
-		this.y=y;
+	public Cavalier(int x,int y, String couleur) {
+		super(x,y,"CAVALIER",couleur)
 	}
 	
 	public boolean deplacement(int new_x, int new_y) {
