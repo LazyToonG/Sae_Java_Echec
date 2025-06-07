@@ -90,8 +90,7 @@ public class Echiquier {
         return indexLigneInt;
     }
 
-
-    public void bougerPiece(Case[][] echiquier){
+    public void bougerPiece(){
         String scan1 = demandeCase();
         String scan2 = demandeCase();
         Case positionDefault = echiquier[traduitCaseLigne(scan1)][traduitCaseColonne(scan1)];
@@ -102,17 +101,12 @@ public class Echiquier {
         else{
             positionVoulue.setPiece(positionDefault.getPiece());
             positionDefault.deletePiece();
-            
         }
-        
     }
 
-
-    public Case[][] getEchiquier (){
+    public Case[][] getEchiquier(){
         return echiquier;
-    }
-
-		
+    }	
 }
 
 
