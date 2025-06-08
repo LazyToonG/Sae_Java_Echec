@@ -1,4 +1,4 @@
-public class Piece{
+public abstract class Piece{
 	private Case destination;
 	private String nom;
 	private String couleur;
@@ -24,6 +24,8 @@ public class Piece{
 	public void setDestination(Case destination){
 		this.destination=destination;
 	}
+
+	public abstract boolean deplacement(Case destination);
 
 	public int avance(int new_x, int new_y) {
 		if deplacement(new_x,new_y) && horsPlateau{
