@@ -34,7 +34,7 @@ public class Piece{
 	}
 
 	public void mangePiece(){
-		if Case.getPiece===null{
+		if Case.getPiece!=null{
 			Case.deletePiece();
 		}
 	}
@@ -43,7 +43,38 @@ public class Piece{
 		return 0<new_x<8 && 0<new_y<8;
 	}
 
-	public boolean allieDevant(int new_x, int new_y){}
+	public int allieDevant(int new_x, int new_y){
+		i=destination.getPositionX;
+		j=destination.getPositionY;
+		if i<new_x && j==new_y{
+			for(int i;i<new_x;i++){
+				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i;
+				}
+			}
+		}
+		if i>new_x && j==new_y{
+			for(int i;i>new_x;i--){
+				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i;
+				}
+			}
+		}
+		if j<new_y && i==new_x{
+			for(int j;j<new_y;j++){
+				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return j;
+				}
+			}
+		}
+		if j>new_y && i==new_x{
+			for(int j;j>new_y;j--){
+				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return j;
+				}
+			}
+		}
+	}
 
 }
 
