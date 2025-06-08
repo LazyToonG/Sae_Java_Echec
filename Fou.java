@@ -1,23 +1,21 @@
-public class Fou extends Pion{
+public class Fou extends Piece{
 
-    public Fou (int deplacementX, int deplacementY, String couleur, Case destination){
-        super(deplacementX, deplacementY, couleur, destination);
-    }
+    public Fou (String couleur, Case destination) {
+		super(couleur, destination);
+	}
 
 
     public boolean deplacement(Case destination){
-    	for(int i=0; i<= 8; i++){
-    		if(this.destination.getPositionX()+i==getPositionX() && this.getPositionY()+i==getPositionY()){
+    	for(int i=0; i < 8; i++){
+    		if(destination.getPositionX()==this.getDestination().getPositionX()+i && destination.getPositionY()==this.getDestination().getPositionY()+i){
     			return true;}
-    		if(this.x-i==x && this.y-i==y)
-    			return true;
-    		if(this.x+i==x && this.y-i==y)
-    			return true;
-    		if(this.x-i==x && this.y+i==y)
-    			return true; 		
-    	}
+			if(destination.getPositionX()==this.getDestination().getPositionX()+i && destination.getPositionY()==this.getDestination().getPositionY()-i){
+				return true;}
+			if(destination.getPositionX()==this.getDestination().getPositionX()-i && destination.getPositionY()==this.getDestination().getPositionY()+i){
+				return true;}
+			if(destination.getPositionX()==this.getDestination().getPositionX()-i && destination.getPositionY()==this.getDestination().getPositionY()-i){
+				return true;} 		
+			}
     		return false;
-    	
-    	
-    }
+		}
 }

@@ -1,21 +1,28 @@
 public class Pion extends Piece{
     
-    public pion (int deplacementX, int deplacementY)  {
-        super(deplacementX, deplacementY);
+  public Pion (String couleur, Case destination) {
+    super(couleur, destination);
+  }
+
+  public boolean deplacement(Case destination){
+    if (this.getCouleur().equals("Noir")) {
+      if ((this.getDestination().getPositionX()==1 && destination.getPositionX()==this.getDestination().getPositionX()+2) || (destination.getPositionX()==this.getDestination().getPositionX()+1)){
+        return true;}
+      if (destination.getPositionX()==this.getDestination().getPositionX()+1){
+        return true;}
     }
-
-
-    public boolean deplacement(Case destination){
-        if (destination.getPositionX()+1==destination.getPositionX())
-    		return true;
-        if(destination.getPositionX()+1==destination.getPositionX() && destination.getPositionY()+1==destination.getPositionY())
-    		return true;
-        return false;
+    if (this.getCouleur().equals("Blanc")) {
+      if ((this.getDestination().getPositionX()==6 && destination.getPositionX()==this.getDestination().getPositionX()-2) || (destination.getPositionX()==this.getDestination().getPositionX()-1)){
+        return true;}
+      if (destination.getPositionX()==this.getDestination().getPositionX()-1){
+        return true;} 
     }
+    return false;
+  }
 
-    public int avanceDeDeux (int deplacementX) {
-        if (deplacementX.equal(7) || deplacementX.equal(2)){
+  public void pionMange(Case destination){
+    if (this.getCouleur().equals("Noir") && destination.)
 
-        }
-    }
+  }
 }
+
