@@ -3,9 +3,8 @@ public class Piece{
 	private String nom;
 	private String couleur;
 	
-	public Piece(int x,int y, String nom, String couleur) {
-		this.x=x;
-		this.y=y;
+	public Piece(Case destination, String nom, String couleur) {
+		this.destination=destination;
 		this.nom=nom;
 		this.couleur=couleur;
 	}
@@ -27,7 +26,7 @@ public class Piece{
 	}
 
 	public int avance(int new_x, int new_y) {
-		if deplacement(new_x,new_y){
+		if deplacement(new_x,new_y) && horsPlateau{
 			mangePiece();
 			this.destination.getPositionX=new_x;
 			this.destination.getPositionY=new_y;
@@ -39,6 +38,12 @@ public class Piece{
 			Case.deletePiece();
 		}
 	}
+
+	public boolean horsPlateau(int new_x, int new_y){
+		return 0<new_x<8 && 0<new_y<8;
+	}
+
+	public boolean allieDevant(int new_x, int new_y){}
 
 }
 
