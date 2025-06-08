@@ -10,27 +10,27 @@ public class Echiquier {
             for (int y = 0; y < 8; y++) {
                 echiquier[i][y] = new Case(i,y);
             }
-            echiquier[0][0].setPiece(new Tour());
+            echiquier[0][0].setPiece(new Tour);
             echiquier[0][1].setPiece(new Cavalier);
-            echiquier[0][2].setPiece(new Four);
-            echiquier[0][3].setPiece(new Dame);
+            echiquier[0][2].setPiece(new Fou("Noir", echiquier[0][2]));
+            echiquier[0][3].setPiece(new Dame("Noir", echiquier[0][5]));
             echiquier[0][4].setPiece(new Roi);
-            echiquier[0][5].setPiece(new Fou);
+            echiquier[0][5].setPiece(new Fou("Noir", echiquier[0][5]));
             echiquier[0][6].setPiece(new Cavalier);
             echiquier[0][7].setPiece(new Tour);
             for (int i = 0; i < 8; i++) {
-                echiquier[1][i].setPiece(new Pion());
+                echiquier[1][i].setPiece(new Pion("Noir", echiquier[1][i]));
             }
-            echiquier[8][0].setPiece(new Tour());
-            echiquier[8][1].setPiece(new Cavalier);
-            echiquier[8][2].setPiece(new Four);
-            echiquier[8][3].setPiece(new Roi);
-            echiquier[8][4].setPiece(new Dame);
-            echiquier[8][5].setPiece(new Fou);
-            echiquier[8][6].setPiece(new Cavalier);
-            echiquier[8][7].setPiece(new Tour);
+            echiquier[7][0].setPiece(new Tour());
+            echiquier[7][1].setPiece(new Cavalier);
+            echiquier[7][2].setPiece(new Fou("Blanc", echiquier[7][2]));
+            echiquier[7][3].setPiece(new Roi);
+            echiquier[7][4].setPiece(new Dame("Blanc", echiquier[7][4]));
+            echiquier[7][5].setPiece(new Fou("Blanc", echiquier[7][5]));
+            echiquier[7][6].setPiece(new Cavalier);
+            echiquier[7][7].setPiece(new Tour);
             for (int i = 0; i < 8; i++) {
-                echiquier[7][i].setPiece(new Pion());
+                echiquier[6][i].setPiece(new Pion("Blanc", echiquier[6][i]));
             }
         }
     }

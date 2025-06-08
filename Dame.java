@@ -1,4 +1,4 @@
-public class Dame extends Pion{
+public class Dame extends Piece{
 
     public Dame (String couleur, Case destination) {
 		super(couleur, destination);
