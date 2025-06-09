@@ -16,7 +16,7 @@ public abstract class Piece{
 	}
 
 	public void setDestination(Case destination){
-		this.getDestination()=destination;
+		this.destination=destination;
 	}
 
 	public abstract boolean deplacement(Case destination);
