@@ -19,10 +19,5 @@ public class Pion extends Piece{
     }
     return false;
   }
-
-  public void pionMange(Case destination){
-    if (this.getCouleur().equals("Noir") && destination.)
-
-  }
 }
 
