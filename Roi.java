@@ -1,7 +1,7 @@
 public class Roi extends Piece{
 	
 	public Roi(Case destination, String couleur) {
-		super(destination,couleur)
+		super(couleur, destination)
 	}
 	
 	public boolean deplacement(int new_x, int new_y) {

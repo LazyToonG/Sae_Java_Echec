@@ -2,7 +2,7 @@ public abstract class Piece{
 	private Case destination;
 	private String couleur;
 	
-	public Piece(Case destination, String couleur) {
+	public Piece(String couleur, Case destination) {
 		this.destination=destination;
 		this.couleur=couleur;
 	}
