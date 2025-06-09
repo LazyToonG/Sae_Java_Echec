@@ -17,7 +17,7 @@ public class Roi extends Piece{
 			for(int i=0;i<8;i++){
 				boolean test=(deplacement(destination.getPositionX()+1,destination.getPositionY())||deplacement(destination.getPositionX()-1,destination.getPositionY())||deplacement(destination.getPositionX(),destination.getPositionY()+1)||deplacement(destination.getPositionX()+1,destination.getPositionY()-1));
 				if (test==false){
-					return false;
+					return true;
 				}
 			}
 		}
