@@ -30,7 +30,7 @@ public abstract class Piece{
 	}
 
 	public void mangePiece(Case destination){
-		if destination.getPiece!=null{
+		if (destination.getPiece!=null){
 			destination.deletePiece();
 		}
 	}
@@ -42,35 +42,35 @@ public abstract class Piece{
 	public int allieDevant(int new_x, int new_y){
 		i=this.destination.getPositionX;
 		j=this.destination.getPositionY;
-		if i<new_x && j==new_y{
+		if (i<new_x && j==new_y){
 			for(int i;i<new_x;i++){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if i>new_x && j==new_y{
+		if (i>new_x && j==new_y){
 			for(int i;i>new_x;i--){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if j<new_y && i==new_x{
+		if (j<new_y && i==new_x){
 			for(int j;j<new_y;j++){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if j>new_y && i==new_x{
+		if (j>new_y && i==new_x){
 			for(int j;j>new_y;j--){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if i<new_x && j<new_y{
+		if (i<new_x && j<new_y){
 			for(int i;i<new_x;i++){
 				for (int j;j<new_y;j++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -79,7 +79,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if i>new_x && j<new_y{
+		if (i>new_x && j<new_y){
 			for(int i;i>new_x;i--){
 				for(int j;j<new_y;j++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -88,7 +88,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if j>new_y && i<new_x{
+		if (j>new_y && i<new_x){
 			for(int j;j<new_y;j--){
 				for(int i;i<new_y;i++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -97,7 +97,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if j>new_y && i>new_x{
+		if (j>new_y && i>new_x){
 			for(int j;j>new_y;j--){
 				for(int i;i<new_y;i--){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -111,35 +111,35 @@ public abstract class Piece{
 	public int roiDevant(Case destination, int new_x, int new_y){
 		i=destination.getPositionX;
 		j=destination.getPositionY;
-		if i<new_x && j==new_y{
+		if (i<new_x && j==new_y){
 			for(int i;i<new_x;i++){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if i>new_x && j==new_y{
+		if (i>new_x && j==new_y){
 			for(int i;i>new_x;i--){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if j<new_y && i==new_x{
+		if (j<new_y && i==new_x){
 			for(int j;j<new_y;j++){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if j>new_y && i==new_x{
+		if (j>new_y && i==new_x){
 			for(int j;j>new_y;j--){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
 					return i,j;
 				}
 			}
 		}
-		if i<new_x && j<new_y{
+		if (i<new_x && j<new_y){
 			for(int i;i<new_x;i++){
 				for (int j;j<new_y;j++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -148,7 +148,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if i>new_x && j<new_y{
+		if (i>new_x && j<new_y){
 			for(int i;i>new_x;i--){
 				for(int j;j<new_y;j++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -157,7 +157,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if j>new_y && i<new_x{
+		if (j>new_y && i<new_x){
 			for(int j;j<new_y;j--){
 				for(int i;i<new_y;i++){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -166,7 +166,7 @@ public abstract class Piece{
 				}
 			}
 		}
-		if j>new_y && i>new_x{
+		if (j>new_y && i>new_x){
 			for(int j;j>new_y;j--){
 				for(int i;i<new_y;i--){
 					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
