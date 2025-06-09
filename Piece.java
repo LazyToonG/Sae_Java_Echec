@@ -16,7 +16,7 @@ public abstract class Piece{
 	}
 
 	public void setDestination(Case destination){
-		this.destination=destination;
+		this.getDestination=destination;
 	}
 
 	public abstract boolean deplacement(Case destination);
@@ -24,8 +24,8 @@ public abstract class Piece{
 	public void avance(int new_x, int new_y) {
 		if deplacement(new_x,new_y) && horsPlateau(new_x,new_y){
 			mangePiece();
-			this.destination.getPositionX=new_x;
-			this.destination.getPositionY=new_y;
+			this.getDestination.getPositionX=new_x;
+			this.getDestination.getPositionY=new_y;
 		}
 	}
 
@@ -40,8 +40,8 @@ public abstract class Piece{
 	}
 
 	public int allieDevant(int new_x, int new_y){
-		i=this.destination.getPositionX;
-		j=this.destination.getPositionY;
+		i=this.getDestination.getPositionX;
+		j=this.getDestination.getPositionY;
 		if (i<new_x && j==new_y){
 			for(int i;i<new_x;i++){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
@@ -109,8 +109,8 @@ public abstract class Piece{
 	}
 
 	public int roiDevant(Case destination, int new_x, int new_y){
-		i=destination.getPositionX;
-		j=destination.getPositionY;
+		i=getDestination.getPositionX;
+		j=getDestination.getPositionY;
 		if (i<new_x && j==new_y){
 			for(int i;i<new_x;i++){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
