@@ -4,8 +4,7 @@ public class Echiquier {
 
     private Case[][] echiquier;
 
-    public Echiquier (Case[][] echiquier) {
-        this.echiquier = echiquier;
+    public Echiquier () {
         for (int i = 0; i< 8; i++){
             for (int y = 0; y < 8; y++) {
                 echiquier[i][y] = new Case(i,y);
