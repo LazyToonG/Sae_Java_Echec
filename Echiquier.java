@@ -9,27 +9,27 @@ public class Echiquier {
             for (int y = 0; y < 8; y++) {
                 echiquier[i][y] = new Case(i,y);
             }
-            echiquier[0][0].setPiece(new Tour);
-            echiquier[0][1].setPiece(new Cavalier);
+            echiquier[0][0].setPiece(new Tour("Noir", echiquier[0][0]));
+            echiquier[0][1].setPiece(new Cavalier("Noir", echiquier[0][1]));
             echiquier[0][2].setPiece(new Fou("Noir", echiquier[0][2]));
-            echiquier[0][3].setPiece(new Dame("Noir", echiquier[0][5]));
-            echiquier[0][4].setPiece(new Roi);
+            echiquier[0][3].setPiece(new Dame("Noir", echiquier[0][3]));
+            echiquier[0][4].setPiece(new Roi("Noir", echiquier[0][4]));
             echiquier[0][5].setPiece(new Fou("Noir", echiquier[0][5]));
-            echiquier[0][6].setPiece(new Cavalier);
-            echiquier[0][7].setPiece(new Tour);
-            for (int i = 0; i < 8; i++) {
-                echiquier[1][i].setPiece(new Pion("Noir", echiquier[1][i]));
+            echiquier[0][6].setPiece(new Cavalier("Noir", echiquier[0][6]));
+            echiquier[0][7].setPiece(new Tour("Noir", echiquier[0][7]));
+            for (int z = 0; z < 8; z++) {
+                echiquier[1][z].setPiece(new Pion("Noir", echiquier[1][z]));
             }
-            echiquier[7][0].setPiece(new Tour());
-            echiquier[7][1].setPiece(new Cavalier);
+            echiquier[7][0].setPiece(new Tour("Blanc", echiquier[7][0]));
+            echiquier[7][1].setPiece(new Cavalier("Blanc", echiquier[7][1]));
             echiquier[7][2].setPiece(new Fou("Blanc", echiquier[7][2]));
-            echiquier[7][3].setPiece(new Roi);
+            echiquier[7][3].setPiece(new Roi("Blanc", echiquier[7][3]));
             echiquier[7][4].setPiece(new Dame("Blanc", echiquier[7][4]));
             echiquier[7][5].setPiece(new Fou("Blanc", echiquier[7][5]));
-            echiquier[7][6].setPiece(new Cavalier);
-            echiquier[7][7].setPiece(new Tour);
-            for (int i = 0; i < 8; i++) {
-                echiquier[6][i].setPiece(new Pion("Blanc", echiquier[6][i]));
+            echiquier[7][6].setPiece(new Cavalier("Blanc", echiquier[7][6]));
+            echiquier[7][7].setPiece(new Tour("Blanc", echiquier[7][7]));
+            for (int z = 0; z < 8; z++) {
+                echiquier[6][z].setPiece(new Pion("Blanc", echiquier[6][z]));
             }
         }
     }
