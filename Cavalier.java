@@ -4,7 +4,11 @@ public class Cavalier extends Piece{
 		super(couleur, destination)
 	}
 	
-	public boolean deplacement(int new_x, int new_y) {
+	public boolean deplacement(Case destination) {
+		new_x=destination.getPositionX;
+		new_y=destination.getPositionY;
+		x=this.destination.getPositionX;
+		y=this.destination.getPositionY;
 		return ((new_x==x-2 && new_y==y-1) || (new_x==x-2 && new_y==y+1) || (new_x==x-1 && new_y==y-2) || (new_x==x+1 && new_y==y-2) || (new_x==x+2 && new_y==y-1) || (new_x==x+2 && new_y==y+1) || (new_x==x-1 && new_y==y+2) || (new_x==x+1 && new_y==y+2));
 	}
 	
