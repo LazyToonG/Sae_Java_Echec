@@ -35,9 +35,9 @@ public abstract class Piece{
 		}
 	}
 
-	public void mangePiece(){
-		if Case.getPiece!=null{
-			Case.deletePiece();
+	public void mangePiece(Case destination){
+		if destination.getPiece!=null{
+			destination.deletePiece();
 		}
 	}
 
@@ -46,36 +46,153 @@ public abstract class Piece{
 	}
 
 	public int allieDevant(int new_x, int new_y){
-		i=destination.getPositionX;
-		j=destination.getPositionY;
+		i=this.destination.getPositionX;
+		j=this.destination.getPositionY;
 		if i<new_x && j==new_y{
 			for(int i;i<new_x;i++){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
-					return i;
+					return i,j;
 				}
 			}
 		}
 		if i>new_x && j==new_y{
 			for(int i;i>new_x;i--){
 				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
-					return i;
+					return i,j;
 				}
 			}
 		}
 		if j<new_y && i==new_x{
 			for(int j;j<new_y;j++){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
-					return j;
+					return i,j;
 				}
 			}
 		}
 		if j>new_y && i==new_x{
 			for(int j;j>new_y;j--){
 				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
-					return j;
+					return i,j;
 				}
 			}
 		}
+		if i<new_x && j<new_y{
+			for(int i;i<new_x;i++){
+				for (int j;j<new_y;j++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if i>new_x && j<new_y{
+			for(int i;i>new_x;i--){
+				for(int j;j<new_y;j++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if j>new_y && i<new_x{
+			for(int j;j<new_y;j--){
+				for(int i;i<new_y;i++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if j>new_y && i>new_x{
+			for(int j;j>new_y;j--){
+				for(int i;i<new_y;i--){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+	}
+
+	public int roiDevant(Case destination, int new_x, int new_y){
+		i=destination.getPositionX;
+		j=destination.getPositionY;
+		if i<new_x && j==new_y{
+			for(int i;i<new_x;i++){
+				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i,j;
+				}
+			}
+		}
+		if i>new_x && j==new_y{
+			for(int i;i>new_x;i--){
+				if (Case.getPositionX==i && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i,j;
+				}
+			}
+		}
+		if j<new_y && i==new_x{
+			for(int j;j<new_y;j++){
+				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i,j;
+				}
+			}
+		}
+		if j>new_y && i==new_x{
+			for(int j;j>new_y;j--){
+				if (Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+					return i,j;
+				}
+			}
+		}
+		if i<new_x && j<new_y{
+			for(int i;i<new_x;i++){
+				for (int j;j<new_y;j++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if i>new_x && j<new_y{
+			for(int i;i>new_x;i--){
+				for(int j;j<new_y;j++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if j>new_y && i<new_x{
+			for(int j;j<new_y;j--){
+				for(int i;i<new_y;i++){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+		if j>new_y && i>new_x{
+			for(int j;j>new_y;j--){
+				for(int i;i<new_y;i--){
+					if (Case.getPositionX==i && Case.getPositionY==j && Case.getPiece!=null && Case.getPiece.getCouleur===this.couleur){
+						return i,j;
+					}
+				}
+			}
+		}
+	}
+
+	public boolean enEchec(Case destination){
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(Echiquier.getEchiquier()[i][j].getClass().getSimpleName().equals("Roi")){
+					int x=i;
+					int y=j;
+				}
+			}
+		}
+		return roiDevant(destination,x,y);
 	}
 
 }

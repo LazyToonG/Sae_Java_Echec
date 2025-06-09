@@ -1,9 +1,7 @@
 public class Cavalier extends Piece{
-	private int x;
-	private int y;
 	
-	public Cavalier(int x,int y, String couleur) {
-		super(x,y,"CAVALIER",couleur)
+	public Cavalier(Case destination, String couleur) {
+		super(destination,couleur)
 	}
 	
 	public boolean deplacement(int new_x, int new_y) {
