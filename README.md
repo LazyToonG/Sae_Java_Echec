@@ -1,3 +1,3 @@
-Lors de cette Sae, où on devait créer de toute pièce un jeu d'echec, on s'est rendu compte dès le début que c'est une tache assez complex vu qu'on nous demande d'un coup de créer plus d'une dizaine de class et de travailler dessus. 
-Même si on on nous a appris comment manipuler ce languague, la complexité et de prendre en compte quel class agit avec laquelle, comme un labyrinthe de données et de savoir à chaque instant où on devra mettre les méthodes avec quel type.
-Aussi le problème majeur est qu'on nous à pas appris comment afficher donc le résultat finale ne sera pas comme un véritable plateau d'échec mais des tableux de tableaux sans couleurs.   
+Lors de cette Sae, où nous devions créer de toute pièce un jeu d'échecs, nous nous sommes rendus compte dès le début que c'est une tache assez complexe. En effet, on nous demande de créer en une seule fois plus d'une dizaine de classes et de travailler dessus.
+Même si on nous a appris à manipuler ce languague, la complexité est de comprendre quelles classes agissent ensemble, comme un labyrinthe de données, et de savoir à chaque instant où nous devrions mettre les méthodes avec quel type.
+Aussi, le problème majeur est qu'on ne nous a pas appris comment afficher donc le résultat final ne sera pas comme un véritable plateau d'échec mais des tableaux de tableaux sans couleurs.

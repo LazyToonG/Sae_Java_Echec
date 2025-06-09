@@ -1,16 +1,10 @@
 public abstract class Piece{
 	private Case destination;
-	private String nom;
 	private String couleur;
 	
-	public Piece(Case destination, String nom, String couleur) {
+	public Piece(Case destination, String couleur) {
 		this.destination=destination;
-		this.nom=nom;
 		this.couleur=couleur;
-	}
-	
-	public String getNom(){
-		return nom;
 	}
 
 	public String getCouleur(){
@@ -27,8 +21,8 @@ public abstract class Piece{
 
 	public abstract boolean deplacement(Case destination);
 
-	public int avance(int new_x, int new_y) {
-		if deplacement(new_x,new_y) && horsPlateau{
+	public void avance(int new_x, int new_y) {
+		if deplacement(new_x,new_y) && horsPlateau(new_x,new_y){
 			mangePiece();
 			this.destination.getPositionX=new_x;
 			this.destination.getPositionY=new_y;
