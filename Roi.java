@@ -1,6 +1,6 @@
 public class Roi extends Piece{
 	
-	public Roi(Case destination, String couleur) {
+	public Roi(String couleur, Case destination) {
 		super(couleur, destination)
 	}
 	

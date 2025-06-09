@@ -1,6 +1,6 @@
 public class Tour extends Piece{
 
-	public Tour(Case destination, String couleur) {
+	public Tour(String couleur, Case destination) {
 		super(couleur,destination)
 	}
 	

@@ -1,6 +1,6 @@
 public class Cavalier extends Piece{
 	
-	public Cavalier(Case destination, String couleur) {
+	public Cavalier(String couleur, Case destination) {
 		super(couleur, destination)
 	}
 	
