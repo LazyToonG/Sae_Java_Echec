@@ -17,6 +17,7 @@
    Joueur joueur2 = new Joueur(nom,'noir');
 
    Joueur joueurCourant=joueur1;
+   boolean echec=false;
 
    public void afficheJeu(){
       System.out.println(plateau.getEchiquier());
@@ -47,22 +48,11 @@
    }
 
    public void tour(Joueur joueurCourant){
-      while (Roi.echecEtMat()==false){
+      while (Roi.echecEtMat(echec)==false){
          afficheJeu();
          afficheCoups();
-
-         Scanner demandePiece = new Scanner(System.in);
-         System.out.println("Entrer le nom de la pièce que vous voulez bouger");
-         String nomPiece = demandePiece.nextLine();
-         Scanner demandeCoup = new Scanner(System.in);
-         System.out.println("Entrer ses nouvelles coordonnées x");
-         String coupX = demandeCoup.nextLine();
-         Scanner demandeCoup = new Scanner(System.in);
-         System.out.println("Entrer ses nouvelles coordonnées y");
-         String coupY = demandeCoup.nextLine();
-
-         Class piece = detectePiece(nomPiece);
-         boolean piece.deplacement(coupX,coupY);
+         System.out.println('Entrez la case de la pièce que vous voulez bouger, puis sa nouvelle position');
+         bougerPiece();
          changementJoueur(joueurCourant);
       }
    }
