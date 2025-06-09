@@ -38,15 +38,6 @@
       }
    }
 
-   public Class detectePiece(String nom){
-      if(nom=='cavalier'){return Cavalier;}
-      if(nom=='dame'){return Dame;}
-      if(nom=='fou'){return Fou;}
-      if(nom=='Pion'){return Pion;}
-      if(nom=='roi'){return Roi;}
-      if(nom=='tour'){return Tour;}
-   }
-
    public void tour(Joueur joueurCourant){
       while (Roi.echecEtMat(echec)==false){
          afficheJeu();
