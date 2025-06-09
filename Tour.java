@@ -5,10 +5,10 @@ public class Tour extends Piece{
 	}
 	
 	public boolean deplacement(Case destination) {
-		new_x=destination.getPositionX;
-		new_y=destination.getPositionY;
-		x=this.destination.getPositionX;
-		y=this.destination.getPositionY;
+		int new_x=destination.getPositionX;
+		int new_y=destination.getPositionY;
+		int x=this.destination.getPositionX;
+		int y=this.destination.getPositionY;
 		return ((new_x==x && new_y!=y) || (new_x!=x && new_y==y));
 	}
 	

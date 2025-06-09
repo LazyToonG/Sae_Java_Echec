@@ -5,10 +5,10 @@ public class Cavalier extends Piece{
 	}
 	
 	public boolean deplacement(Case destination) {
-		new_x=destination.getPositionX;
-		new_y=destination.getPositionY;
-		x=this.destination.getPositionX;
-		y=this.destination.getPositionY;
+		int new_x=destination.getPositionX;
+		int new_y=destination.getPositionY;
+		int x=this.destination.getPositionX;
+		int y=this.destination.getPositionY;
 		return ((new_x==x-2 && new_y==y-1) || (new_x==x-2 && new_y==y+1) || (new_x==x-1 && new_y==y-2) || (new_x==x+1 && new_y==y-2) || (new_x==x+2 && new_y==y-1) || (new_x==x+2 && new_y==y+1) || (new_x==x-1 && new_y==y+2) || (new_x==x+1 && new_y==y+2));
 	}
 	

@@ -5,13 +5,21 @@ public class Roi extends Piece{
 	}
 	
 	public boolean deplacement(Case destination) {
-		new_x=destination.getPositionX;
-		new_y=destination.getPositionY;
-		x=this.destination.getPositionX;
-		y=this.destination.getPositionY;
+		int new_x=destination.getPositionX;
+		int new_y=destination.getPositionY;
+		int x=this.destination.getPositionX;
+		int y=this.destination.getPositionY;
 		return (new_x==x-1 || new_y==y-1 || new_x==x+1 || new_y==y+1);
 	}
 	
-	public boolean EnEchec() {
+	public boolean echecEtMat(boolean echec) {
+		if (echec){
+			for(int i=0;i<8;i++){
+				boolean test=(deplacement(destination.getPositionX+1,destination.getPositionY)||deplacement(destination.getPositionX-1,destination.getPositionY)||deplacement(destination.getPositionX,destination.getPositionY+1)||deplacement(destination.getPositionX+1,destination.getPositionY-1));
+				if (test==false){
+					return false
+				}
+			}
+		}
 	}
 }
